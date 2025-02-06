@@ -5,6 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calmify</title>
     <link rel="stylesheet" href="src/styles/output.css" />
+    <link rel="icon" type="image/x-icon" href="src/assets/calmify-logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body class="bg-[#F8F7F0]">
+    <nav class="fixed top-0 left-0 w-full px-10 py-8">
+      <div class="flex items-center space-x-4">
+        <img src="src/assets/calmify-logo.svg" alt="Calmify Logo" />
+        <h1 class="font-sans text-xl font-medium md:text-2xl">Calmify</h1>
+      </div>
+    </nav>
+    <main>
+      <div class="flex">
+        <section class="container flex w-1/2 items-center justify-between">
+          <div class="mt-20 flex w-4/5 flex-col lg:ml-16">
+            <h2 class="font-sans text-xl leading-16 font-normal md:text-4xl lg:text-5xl">
+              A digital therapist found on the palm of your hands
+            </h2>
+            <p class="mt-6 py-4 font-sans text-lg font-normal">
+              At Calmify, we believe that everyone should have access to a therapist, and find the
+              support that they need to get back up on their feet. Our digital therapist are always
+              happy to support you. If you want to talk, click the button below.
+            </p>
+            <div>
+              <button
+                class="mt-4 rounded-full bg-red-400 px-6 py-3 font-sans font-medium text-white"
+              >
+                Chat Here
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="relative container h-screen w-1/2 max-w-full">
+          <img
+            src="src/assets/therapy.jpg"
+            alt="therapy"
+            class="absolute top-0 h-screen w-full object-cover xl:rounded-l-4xl"
+          />
+        </section>
+      </div>
+    </main>
+  </body>
 </html>

@@ -25,31 +25,31 @@
     </nav>
     <main>
       <div class="relative container mx-auto flex h-[90vh] flex-col justify-between">
-        <div class="mt-16 flex flex-col items-center p-3">
+        <div class="mt-8 flex flex-col items-center p-4 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16">
           <div class="flex flex-col items-center gap-2">
             <div class="rounded-xl bg-[#ebebeb] p-2 shadow-lg sm:p-3">
               <img src="../assets/calmify-logo.svg" alt="Calmify Logo" class="size-12" />
             </div>
             <h1
-              class="mt-5 font-[roboto] text-2xl font-medium text-[#ebebeb] sm:text-3xl md:text-4xl"
+              class="mt-5 font-[roboto] text-xl font-medium text-[#ebebeb] sm:text-2xl md:text-4xl"
             >
               How Can I Help You?
             </h1>
-            <p class="mt-2 text-center text-xs text-[#ebebeb] sm:text-sm md:mt-5 md:text-[16px]">
+            <p class="mt-2 text-center text-xs text-[#ebebeb] sm:text-sm md:mt-5 md:text-base">
               Calmify is here to help you with your mental health. <br class="hidden sm:block" />
               Feel free to talk to me about anything that is on your mind.
             </p>
           </div>
         </div>
         <div
-          class="absolute inset-x-0 bottom-0 flex items-center justify-center p-4 sm:p-5 md:p-8 lg:p-10"
+          class="absolute inset-x-0 bottom-0 flex flex-col items-center justify-center p-4 sm:p-5 md:p-8 lg:p-10"
         >
           <div
             class="flex w-full items-center justify-between gap-2 rounded-xl border-1 border-gray-400 bg-[#c7c7c7] p-2 shadow-lg md:w-[70vw] md:gap-4 lg:w-[70vw] lg:gap-6 xl:w-[50vw] xl:gap-12"
           >
             <label class="sr-only" for="chatInput"></label>
             <textarea
-              class="w-full resize-none p-2 text-wrap outline-none"
+              class="ext-wrap w-full resize-none text-xs outline-none md:p-2 md:text-base"
               type="text"
               id="chatInput"
               name="chatInput"
@@ -61,6 +61,9 @@
               <img src="../assets/send-svgrepo-com.svg" alt="send" class="size-6 sm:size-8" />
             </button>
           </div>
+          <p class="mt-2 text-center font-sans text-xs text-[#ebebeb] sm:text-sm md:mt-4">
+            Calmify is not a licensed therapist. If you are in crisis, please seek help.
+          </p>
         </div>
       </div>
     </main>

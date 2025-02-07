@@ -577,6 +577,9 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
@@ -689,6 +692,9 @@
   .bg-no-repeat {
     background-repeat: no-repeat;
   }
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
+  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -715,6 +721,9 @@
   }
   .font-\[roboto\] {
     font-family: roboto;
+  }
+  .font-sans {
+    font-family: var(--font-sans);
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -788,6 +797,11 @@
       }
     }
   }
+  .sm\:mt-10 {
+    @media (width >= 40rem) {
+      margin-top: calc(var(--spacing) * 10);
+    }
+  }
   .sm\:block {
     @media (width >= 40rem) {
       display: block;
@@ -814,6 +828,12 @@
       padding-inline: calc(var(--spacing) * 5);
     }
   }
+  .sm\:text-2xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
   .sm\:text-3xl {
     @media (width >= 40rem) {
       font-size: var(--text-3xl);
@@ -826,9 +846,19 @@
       line-height: var(--tw-leading, var(--text-sm--line-height));
     }
   }
+  .md\:mt-4 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 4);
+    }
+  }
   .md\:mt-5 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:mt-12 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 12);
     }
   }
   .md\:block {
@@ -885,6 +915,11 @@
       align-self: flex-start;
     }
   }
+  .md\:p-2 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 2);
+    }
+  }
   .md\:p-8 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 8);
@@ -902,9 +937,15 @@
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
-  .md\:text-\[16px\] {
+  .md\:text-base {
     @media (width >= 48rem) {
-      font-size: 16px;
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+  }
+  .lg\:mt-14 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 14);
     }
   }
   .lg\:w-1\/3 {
@@ -951,6 +992,11 @@
   .xl\:left-\[5\%\] {
     @media (width >= 80rem) {
       left: 5%;
+    }
+  }
+  .xl\:mt-16 {
+    @media (width >= 80rem) {
+      margin-top: calc(var(--spacing) * 16);
     }
   }
   .xl\:w-\[50vw\] {

@@ -5,20 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat</title>
     <link rel="stylesheet" href="../styles/output.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/calmify-logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="bg-[#1f1f1f]">
     <nav class="flex items-start justify-start p-4">
       <a href="../../index.html">
-        <img class="size-8" src="../assets/left-arrow-svgrepo-com.svg" alt="left-arrow" />
+        <img
+          class="size-8 invert-100"
+          src="../assets/left-arrow-svgrepo-com.svg"
+          alt="left-arrow"
+        />
       </a>
     </nav>
     <main>
       <div class="relative container mx-auto flex h-[90vh] flex-col justify-between">
-        <div class="mt-16 flex flex-col items-center">
-          <img src="../assets/calmify-logo.svg" alt="Calmify Logo" class="size-12" />
-          <h1 class="mt-5 font-sans text-2xl font-medium text-black sm:text-3xl md:text-4xl">
-            How Can I Help You?
-          </h1>
+        <div class="mt-16 flex flex-col items-center p-3">
+          <div class="flex flex-col items-center gap-2">
+            <div class="rounded-xl bg-[#ebebeb] p-2 shadow-lg sm:p-3">
+              <img src="../assets/calmify-logo.svg" alt="Calmify Logo" class="size-12" />
+            </div>
+            <h1
+              class="mt-5 font-[roboto] text-2xl font-medium text-[#ebebeb] sm:text-3xl md:text-4xl"
+            >
+              How Can I Help You?
+            </h1>
+            <p class="mt-2 text-center text-[#ebebeb] sm:text-sm md:mt-5">
+              Calmify is here to help you with your mental health. <br />
+              Feel free to talk to me about anything that is on your mind.
+            </p>
+          </div>
         </div>
         <div class="absolute inset-x-0 bottom-0 flex items-center justify-center p-4">
           <label for="chatInput"></label>

@@ -13,41 +13,44 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-[#F8F7F0]">
-    <nav class="fixed top-0 left-0 w-full px-10 py-8">
-      <div class="flex items-center space-x-4">
+  <body
+    class="h-full overflow-hidden bg-[url(../../src/assets/main-bg.jpg)] bg-cover bg-[center_top_50%] bg-no-repeat"
+  >
+    <nav
+      class="flex shrink-0 items-center justify-center p-4 md:justify-between xl:pl-20 2xl:pl-28"
+    >
+      <div class="flex items-center md:space-x-4">
         <img src="src/assets/calmify-logo.svg" alt="Calmify Logo" />
-        <h1 class="font-sans text-xl font-medium md:text-2xl">Calmify</h1>
+        <h1 class="hidden font-sans text-xl font-medium text-white md:block md:text-2xl">
+          Calmify
+        </h1>
       </div>
     </nav>
-    <main>
-      <div class="flex">
-        <section class="container flex w-1/2 items-center justify-between">
-          <div class="mt-20 flex w-4/5 flex-col lg:ml-16">
-            <h2 class="font-sans text-xl leading-16 font-normal md:text-4xl lg:text-5xl">
-              A digital therapist found on the palm of your hands
-            </h2>
-            <p class="mt-6 py-4 font-sans text-lg font-normal">
-              At Calmify, we believe that everyone should have access to a therapist, and find the
-              support that they need to get back up on their feet. Our digital therapist are always
-              happy to support you. If you want to talk, click the button below.
+    <main class="relative h-screen">
+      <div
+        class="absolute bottom-[25%] container mx-auto flex flex-col gap-2 px-4 sm:px-5 md:gap-6 lg:gap-8 xl:left-[5%] xl:gap-10"
+      >
+        <div class="flex w-full flex-col items-start">
+          <h2
+            class="mb-3 text-left font-sans text-6xl font-[500] text-white lg:text-8xl xl:text-9xl"
+          >
+            Therapy, <br />
+            Near You.
+          </h2>
+        </div>
+        <div class="flex flex-col justify-start gap-1.5 md:justify-end lg:px-7">
+          <div
+            class="flex w-full flex-col items-start self-start md:w-2/3 md:self-start lg:w-1/3 lg:self-end"
+          >
+            <p class="font-sans text-[18px] font-[500] text-wrap text-white">
+              Calmify takes upon a new approach to mental health by providing users with a
+              thoughtful, supporting, artifically intelligent chatbot that is available 24/7.
             </p>
-            <div>
-              <button
-                class="mt-4 rounded-full bg-red-400 px-6 py-3 font-sans font-medium text-white"
-              >
-                Chat Here
-              </button>
-            </div>
+            <button class="mt-4 rounded-lg bg-red-300 px-4 py-2 text-white hover:bg-blue-600">
+              Chat Now
+            </button>
           </div>
-        </section>
-        <section class="relative container h-screen w-1/2 max-w-full">
-          <img
-            src="src/assets/therapy.jpg"
-            alt="therapy"
-            class="absolute top-0 h-screen w-full object-cover xl:rounded-l-4xl"
-          />
-        </section>
+        </div>
       </div>
     </main>
   </body>

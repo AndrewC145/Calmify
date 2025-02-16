@@ -1,5 +1,23 @@
 # Calmify
 
+![calmify-main](./frontend/src/assets/calmify-main.JPG)
+A therapy designed chat bot created using HTML, Tailwind CSS, Javascript, and Node.js
+
+Features:
+
+- Send Messages to the Chat bot by typing your prompt which calls the Ollama API
+- AI responds with messages
+- Responsive Design
+
+Tools Used:
+
+- HTML
+- Tailwind CSS
+- Javascript
+- Node.js and Express.js
+- Ollama API
+- VSCode
+
 ## Problem Statement: How can we make our website accessible for everyone?
 
 Ideas:

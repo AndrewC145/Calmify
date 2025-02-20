@@ -36,3 +36,9 @@ async function getBotResponse(userMessage) {
 
   return console.log(response.message.content);
 }
+
+
+export function initialize() {
+  sendMessage();
+  getBotResponse('Hello');
+}

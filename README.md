@@ -1,6 +1,6 @@
 # Calmify
 
-![calmify-main](./frontend/src/assets/calmify-main.JPG)
+![calmify-main](./dist/assets/calmify-main.JPG)
 A therapy designed chat bot created using HTML, Tailwind CSS, Javascript, and Node.js
 
 Features:
@@ -26,12 +26,12 @@ Ideas:
 - A smaller device will adjust it so the UI changes into a more compact design
 - Tabs are fully displayed on a bar for computers, but when it comes to smaller screens they are placed in a drop down tab in the top right.
 
-![navigation bar](./frontend/src/assets/readme-nav.JPG)
+![navigation bar](./dist/assets/readme-nav.JPG)
 
 - Images are either replaced with confined ones or shrunken or non-important parts are cut out.
 - For mobile devices web pages are resized into thin, but long scroll like pages.
 
-![mobile-design](./frontend/src/assets/readme-mobile.JPG)
+![mobile-design](./dist/assets/readme-mobile.JPG)
 
 - We must make it so that the amount of animations that are displayed for a computer are reduced for smaller devices which run on smaller hardware.
 - Include a list of different languages to display the website in.
@@ -41,13 +41,13 @@ Ideas:
 - Make sure our website is compatible with the majority of chrome extensions
 - Make sure our website can be accessed by blind individuals
 
-![read-aloud-extension](./frontend/src/assets/readme-aloud.JPG)
+![read-aloud-extension](./dist/assets/readme-aloud.JPG)
 
 - Make sure our website can be accessed by colour blind individuals
 - Have our website have Alphabetic characters from other languages
 - Have our website be secure and private using https instead of http
 
-![security-https](./frontend/src/assets/readme-secur.JPG)
+![security-https](./dist/assets/readme-secur.JPG)
 
 - Have our website be saved as cache so you don't have to download the assets repeatedly to open it
 - Have our website be dynamic and interactive
@@ -56,7 +56,7 @@ Ideas:
 
 ### Pressing the Chat Now opens the chat menu.
 
-![chatbot-prototype](./frontend/src/assets/readme-chat.JPG)
+![chatbot-prototype](./dist/assets/readme-chat.JPG)
 
 #### Summarized Solution
 

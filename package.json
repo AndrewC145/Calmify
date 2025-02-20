@@ -92,7 +92,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tw-watch": "@tailwindcss/cli -i ./dist/styles/index.css -o ./dist/styles/output.css --watch",
+    "tw-watch": "tailwindcss -i ./dist/styles/index.css -o ./dist/styles/output.css --watch",
     "build": "webpack"
   },
   "devDependencies": {

@@ -53,14 +53,14 @@
           >
             <label class="sr-only" for="chatInput"></label>
             <textarea
-              class="w-full resize-none text-xs text-wrap outline-none md:p-2 md:text-sm lg:text-base"
+              class="message-area w-full resize-none text-xs text-wrap outline-none md:p-2 md:text-sm lg:text-base"
               type="text"
               id="chatInput"
               name="chatInput"
               placeholder="Type your message here."
             ></textarea>
             <button
-              class="cursor-pointer rounded-xl bg-red-300 p-2 transition duration-150 ease-in hover:bg-red-400"
+              class="send-msg cursor-pointer rounded-xl bg-red-300 p-2 transition duration-150 ease-in hover:bg-red-400"
             >
               <img src="../assets/send-svgrepo-com.svg" alt="send" class="size-6 sm:size-8" />
             </button>
@@ -70,6 +70,7 @@
           </p>
         </div>
       </div>
+      <script type="module" src="../chat/ollama-logic.js"></script>
     </main>
   </body>
 </html>

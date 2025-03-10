@@ -1,44 +1,66 @@
-import ollama from 'ollama';
+const chatUrl = "http://127.0.0.1:11434/api/chat";
 
-const chatIntro = document.querySelector('.chat-intro');
-const chatInput = document.querySelector('.chat-input');
-const chatOutput = document.querySelector('.messages-container');
-const sendBtn = document.querySelector('.send-msg');
+async function getResponse(question, callback) {
+  const body = {
+    model: "qwen:0.5b",
+    messages: [
+      {
+        role: "user",
+        content: question,
+      },
+    ],
+    stream: true,
+  };
 
-sendBtn.addEventListener('click', sendMessage);
-chatInput.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter') {
-    sendMessage();
-  }
-});
-
-function sendMessage() {
-  const userMessage = chatInput.value;
-  if (userMessage === '') return;
-
-  try {
-    getBotResponse(userMessage);
-    chatInput.value = '';
-  } catch {
-    console.error('Error: Unable to get response from the bot');
-  }
-}
-
-async function getBotResponse(userMessage) {
-  const response = await ollama.chat({
-    model: 'qwen',
-    messages: [{ role: 'user', content: userMessage }],
+  const response = await fetch(chatUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
   });
 
-  if (!response.ok) {
-    throw new Error('Error: Unable to get response from the bot');
+  async function readStream(data) {
+    const decode = new TextDecoder("utf-8");
+    const reader = data.body.getReader();
+    let result = "";
+
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) {
+        break;
+      }
+      const text = decode.decode(value);
+      const parts = text.split("\n");
+      for (let i = 0; i < parts.length; i++) {
+        if (parts[i] === "") {
+          continue;
+        }
+
+        try {
+          const json = JSON.parse(parts[i]);
+          result += json["message"]["content"];
+          callback(result);
+        } catch {
+          console.log("Error: " + parts[i]);
+        }
+      }
+    }
   }
 
-  return console.log(response.message.content);
+  await readStream(response);
 }
+
+function sendMessage() {
+  const question = document.querySelector(".chat-input").value;
+
+  getResponse(question, console.log);
+}
+
+document.querySelector(".send-msg").addEventListener("click", sendMessage);
 
 
 export function initialize() {
   sendMessage();
-  getBotResponse('Hello');
+  getResponse("Hello", console.log);
 }

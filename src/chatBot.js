@@ -22,7 +22,6 @@ async function getResponse(question) {
   })
 
   let fullMessage = response.message.content;
-  console.log(fullMessage);
   displayBotMessage(fullMessage)
 }
 

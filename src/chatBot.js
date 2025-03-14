@@ -1,3 +1,53 @@
+import ollama from 'ollama/browser';
+
+const sendBtn = document.querySelector(".send-msg");
+const question = document.querySelector(".chat-input");
+
+async function getResponse(question) {
+  const response = await ollama.chat({
+    model: "qwen:0.5b",
+    messages: [
+      {
+        role: "system",
+        content: "You are a therapy chatbot. Answer anything related to mental health, but otherwise, say it is out of your scope."
+      },
+      {
+        role: "user",
+        content: question,
+      },
+    ],
+    stream: true,
+  })
+
+  let fullMessage = '';
+
+  for await (const part of response) {
+    fullMessage += part.message.content;
+    console.log(fullMessage);
+  }
+}
+
+function sendMessage() {
+  const questionInput = question.value;
+
+  getResponse(questionInput);
+}
+
+sendBtn.addEventListener("click", sendMessage);
+question.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    sendMessage();
+    question.value = "";
+  }
+})
+
+
+export function initialize() {
+}
+
+
+/*
 const chatUrl = "http://127.0.0.1:11434/api/chat";
 
 async function getResponse(question, callback) {
@@ -62,5 +112,6 @@ document.querySelector(".send-msg").addEventListener("click", sendMessage);
 
 export function initialize() {
   sendMessage();
-  getResponse("Hello", console.log);
 }
+
+*/

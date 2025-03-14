@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.0.7",
-    "ollama": "^0.5.13",
+    "ollama": "^0.5.14",
     "tailwindcss": "^4.0.7"
   }
 }

@@ -6,9 +6,17 @@ const question = document.querySelector(".chat-input");
 const chatIntro = document.querySelector(".chat-intro");
 const messageContainer = document.querySelector(".messages-container");
 
+function changeModel() {
+  const selectedModel = document.querySelector(".model-select").value;
+
+  return selectedModel;
+}
+
 async function getResponse(question) {
+  const ollamaModel = changeModel();
+
   const response = await ollama.chat({
-    model: "qwen:0.5b",
+    model: ollamaModel,
     messages: [
       {
         role: "system",

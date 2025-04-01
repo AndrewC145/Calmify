@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack",
     "tw-watch": "tailwindcss -i ./dist/styles/index.css -o ./dist/styles/output.css --watch",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",

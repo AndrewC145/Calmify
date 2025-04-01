@@ -14,7 +14,7 @@
     />
   </head>
   <body class="bg-[#1f1f1f]">
-    <nav class="flex items-start justify-start p-4">
+    <nav class="flex items-start justify-between p-4">
       <a href="../../dist/index.html">
         <img
           class="size-8 invert-100"
@@ -22,6 +22,13 @@
           alt="left-arrow"
         />
       </a>
+      <div class="flex items-center gap-2 rounded-lg bg-[#c7c7c7] p-2 shadow-lg">
+        <select class="cursor-pointer model-select">
+          <option value="qwen:0.5b" selected="selected">qwen:0.5b</option>
+          <option value="llama3.2:1b">llama3.2:1b</option>
+          <option value="llama3.2:3b">llama3.2:3b</option>
+        </select>
+      </div>
     </nav>
     <main>
       <div class="relative container mx-auto flex h-[90vh] flex-col justify-between">

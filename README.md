@@ -18,8 +18,10 @@ Tools Used:
 - VSCode
 
 ## Installation
-Clone the project using https://github.com/AndrewC145/Calmify.git
-
+Clone the project using 
+```
+git clone https://github.com/AndrewC145/Calmify.git
+```
 Change to the directory and type 
 ```
 npm install
